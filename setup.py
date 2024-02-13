@@ -128,6 +128,7 @@ if not SKIP_CUDA_BUILD:
                 "cxx": ["-O3"],
                 "nvcc": append_nvcc_threads(
                     [
+                        "-DWIN32_LEAN_AND_MEAN",
                         "-O3",
                         "-U__CUDA_NO_HALF_OPERATORS__",
                         "-U__CUDA_NO_HALF_CONVERSIONS__",
